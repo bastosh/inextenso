@@ -1,0 +1,15 @@
+{
+    "name": "bastoche/motivations",
+    "authors": [
+        {
+            "name": "Sébastien Pereda",
+            "email": "sebastien.pereda@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "classmap": [
+            "./app"
+        ]
+    }
+}
