@@ -4,10 +4,12 @@ class MotivationController extends Controller
 {
     public function show()
     {
-        $src = file(SRC.'motivations');
-        $motivationGenerator = new Motivation($src);
+        $motivations = file(SRC.'motivations');
+        $motivationGenerator = new Motivation($motivations);
         $motivation = $motivationGenerator->generate();
-
-        return $this->render('motivations/show', compact('motivation'));
+        $colors = file(SRC.'colors');
+        $colorgenerator = new Color($colors);
+        $color = $colorgenerator->generate();
+        return $this->render('motivations/show', compact('motivation', 'color'));
     }
 }
